@@ -112,33 +112,36 @@ export function TourPlannerComponent() {
               Featured Destinations
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {["Paris", "Tokyo", "New York"].map((city, index) => (
-                <motion.div
-                  key={city}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden"
-                >
-                  <img
-                    src={`/placeholder.svg?height=200&width=400&text=${city}`}
-                    alt={city}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                      {city}
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Explore the wonders of {city} and create lasting memories.
-                    </p>
-                    <Button variant="outline" className="w-full">
-                      View Itineraries
-                      <ChevronRight className="h-4 w-4 ml-2" />
-                    </Button>
-                  </div>
-                </motion.div>
-              ))}
+              {["Shohabazaar", "Naktala", "Howrah Bridge"].map(
+                (city, index) => (
+                  <motion.div
+                    key={city}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="bg-white rounded-lg shadow-lg overflow-hidden"
+                  >
+                    <img
+                      src={`/placeholder.svg?height=200&width=400&text=${city}`}
+                      alt={city}
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                        {city}
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        Explore the wonders of {city} and create lasting
+                        memories.
+                      </p>
+                      <Button variant="outline" className="w-full">
+                        View Itineraries
+                        <ChevronRight className="h-4 w-4 ml-2" />
+                      </Button>
+                    </div>
+                  </motion.div>
+                )
+              )}
             </div>
           </div>
         </section>
